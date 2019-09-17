@@ -1,27 +1,37 @@
-class Employee:
-    count=0
-    total_salary=0
+import pandas as pd
 
+glass_data = pd.read_csv('../glass.csv')
 
-    def __init__(self, name, family, salary, department):
-        self.name =name
-        self.family=family
-        self.salary=salary
-        self.department=department
-        Employee.count+=1
-        Employee.total_salary =Employee.total_salary+ self.salary
+# print(glass_data.isnull().sum())
 
-    def average(self):
-        avg_salary=Employee.total_salary/Employee.count
-        print("The Average Salary is: ",avg_salary)
+# Preprocessing data
+x = glass_data.drop('Type', axis=1)
+y = glass_data['Type']
 
-class fulltime_employee(Employee):
+# ----------Splitting Data-----------#
+# Import train_test_split function
+from sklearn import model_selection
 
-    def __init__(self, name, family, salary, department):
-        Employee.__init__(self, name, family, salary, department)
+# Split dataset into training set and test set
+X_train, X_test, y_train, y_test = model_selection.train_test_split(x, y, test_size=0.2,
+                                                                    random_state=0)  # 70% training and 30% test
 
-emp1=Employee("Dinesh", 4, 9000, "Tech")
-emp2=fulltime_employee("Sand", 5, 2000, "Lab")
-emp3=Employee("Ravi", 2, 3000, "Sup")
+# -----------Model Generation ----------#
+# Import Gaussian Naive Bayes model
+from sklearn.naive_bayes import GaussianNB
 
-emp3.average()
+# Create a Gaussian Classifier
+model = GaussianNB()
+
+# Train the model using the training sets
+model.fit(X_train, y_train)
+
+# Predict the response for test dataset
+y_pred = model.predict(X_test)
+
+# ----------Evaluating the model -------------#
+from sklearn import metrics
+
+# Model Accuracy, how often is the classifier correct?
+print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
+print("classification_report\n", metrics.classification_report(y_test, y_pred))
