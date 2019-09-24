@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3784e1e0-f295-4eeb-a4b3-732ae75a51ea" name="Default Changelist" comment="" />
+    <list default="true" id="3784e1e0-f295-4eeb-a4b3-732ae75a51ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ICP-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ICP-4/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ICP-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ICP-5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -143,12 +145,12 @@
       <workItem from="1568003639750" duration="722000" />
       <workItem from="1568581904929" duration="1173000" />
       <workItem from="1568679253519" duration="245000" />
-      <workItem from="1568686482447" duration="315000" />
+      <workItem from="1568686482447" duration="854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2800000" />
+    <option name="totallyTimeSpent" value="3339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
